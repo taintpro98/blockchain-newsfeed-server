@@ -1,9 +1,9 @@
 package cache
 
 import (
+	"blockchain-newsfeed-server/config"
 	"context"
 	"fmt"
-	"fx-golang-server/config"
 
 	"github.com/redis/go-redis/v9"
 )

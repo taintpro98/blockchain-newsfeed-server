@@ -8,7 +8,7 @@ import (
 	"strings"
 	"time"
 
-	"fx-golang-server/pkg/constants"
+	"blockchain-newsfeed-server/pkg/constants"
 
 	"github.com/rs/zerolog"
 	"github.com/rs/zerolog/log"

@@ -1,7 +1,7 @@
 package transport
 
 import (
-	"fx-golang-server/module/core/dto"
+	"blockchain-newsfeed-server/module/core/dto"
 
 	"github.com/gin-gonic/gin"
 )

@@ -1,10 +1,10 @@
 package cache
 
 import (
+	"blockchain-newsfeed-server/config"
 	"context"
 	"encoding/json"
 	"fmt"
-	"fx-golang-server/config"
 	"strconv"
 	"time"
 
@@ -28,7 +28,7 @@ type IRedisClient interface {
 	Publish(ctx context.Context, channel string, value interface{}) error // value is not a pointer
 	Subscribe(ctx context.Context, channel string) *redis.PubSub
 
-	RPush(ctx context.Context, queueName string, value interface{}) error // value is not a pointer
+	RPush(ctx context.Context, queueName string, value interface{}) error     // value is not a pointer
 	LPop(ctx context.Context, queueName string, outputType interface{}) error // value is a pointer
 }
 

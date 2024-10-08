@@ -1,10 +1,10 @@
 package middleware
 
 import (
-	"fx-golang-server/module/core/dto"
-	"fx-golang-server/pkg/constants"
-	"fx-golang-server/pkg/e"
-	"fx-golang-server/token"
+	"blockchain-newsfeed-server/module/core/dto"
+	"blockchain-newsfeed-server/pkg/constants"
+	"blockchain-newsfeed-server/pkg/e"
+	"blockchain-newsfeed-server/token"
 
 	"github.com/gin-gonic/gin"
 )

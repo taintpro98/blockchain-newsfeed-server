@@ -8,7 +8,7 @@ steps:
       '--build-arg',
       'TELEGRAM_CHAT_ID',
       "-t", 
-      "gcr.io/${PROJECT_ID}/fx-golang-server", 
+      "gcr.io/${PROJECT_ID}/blockchain-newsfeed-server", 
       "."
     ]
     secretEnv: [
@@ -18,7 +18,7 @@ steps:
 
   # Bước 2: Push image vừa build lên GCR
   - name: "gcr.io/cloud-builders/docker"
-    args: ["push", "gcr.io/${PROJECT_ID}/fx-golang-server"]
+    args: ["push", "gcr.io/${PROJECT_ID}/blockchain-newsfeed-server"]
 
   # Bước 3: Deploy ứng dụng lên Google Cloud Run
   - name: "gcr.io/cloud-builders/gcloud"
@@ -26,9 +26,9 @@ steps:
       [
         "run",
         "deploy",
-        "fx-golang-server-2",  # Tên service trên Cloud Run
+        "blockchain-newsfeed-server-2",  # Tên service trên Cloud Run
         "--image",
-        "gcr.io/${PROJECT_ID}/fx-golang-server",  # Đường dẫn image vừa push lên GCR
+        "gcr.io/${PROJECT_ID}/blockchain-newsfeed-server",  # Đường dẫn image vừa push lên GCR
         "--region",
         "us-central1",
         "--platform",
@@ -38,7 +38,7 @@ steps:
 
 # Định nghĩa các image đầu ra
 images:
-  - "gcr.io/${PROJECT_ID}/fx-golang-server"
+  - "gcr.io/${PROJECT_ID}/blockchain-newsfeed-server"
 
 availableSecrets:
   secretManager:

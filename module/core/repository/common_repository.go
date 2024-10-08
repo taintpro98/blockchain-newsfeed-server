@@ -1,11 +1,11 @@
 package repository
 
 import (
+	"blockchain-newsfeed-server/config"
+	"blockchain-newsfeed-server/module/core/dto"
 	"context"
 	"errors"
 	"fmt"
-	"fx-golang-server/config"
-	"fx-golang-server/module/core/dto"
 
 	"github.com/rs/zerolog/log"
 

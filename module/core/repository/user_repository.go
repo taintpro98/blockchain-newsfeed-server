@@ -1,10 +1,10 @@
 package repository
 
 import (
+	"blockchain-newsfeed-server/config"
+	"blockchain-newsfeed-server/module/core/dto"
+	"blockchain-newsfeed-server/module/core/model"
 	"context"
-	"fx-golang-server/config"
-	"fx-golang-server/module/core/dto"
-	"fx-golang-server/module/core/model"
 
 	"gorm.io/gorm"
 )

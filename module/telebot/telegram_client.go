@@ -1,9 +1,9 @@
 package telebot
 
 import (
+	"blockchain-newsfeed-server/module/blockchain"
+	"blockchain-newsfeed-server/module/telebot/handlers"
 	"context"
-	"fx-golang-server/module/blockchain"
-	"fx-golang-server/module/telebot/handlers"
 
 	tgbotapi "github.com/go-telegram-bot-api/telegram-bot-api"
 	"github.com/rs/zerolog/log"
@@ -45,7 +45,7 @@ func (b *TelegramClient) Handle(ctx context.Context) error {
 				Interface("text", update.Message.Text).
 				Interface("from", update.Message.From).
 				Msg("Incoming message")
-				
+
 			switch update.Message.Command() {
 			case "start":
 				b.startHandler.Handle(ctx, update.Message)

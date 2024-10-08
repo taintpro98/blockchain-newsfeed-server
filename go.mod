@@ -1,4 +1,4 @@
-module fx-golang-server
+module blockchain-newsfeed-server
 
 go 1.22.8
 

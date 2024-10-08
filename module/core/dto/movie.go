@@ -1,6 +1,6 @@
 package dto
 
-import "fx-golang-server/module/core/model"
+import "blockchain-newsfeed-server/module/core/model"
 
 type ListMoviesRequest struct {
 	Paginate

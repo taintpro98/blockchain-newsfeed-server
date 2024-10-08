@@ -1,6 +1,6 @@
 package dto
 
-import "fx-golang-server/pkg/constants"
+import "blockchain-newsfeed-server/pkg/constants"
 
 type Paginate struct {
 	Limit  *int `form:"limit" binding:"omitempty,gte=1,lte=100"`

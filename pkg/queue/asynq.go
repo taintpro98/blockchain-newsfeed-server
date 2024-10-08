@@ -1,8 +1,8 @@
 package queue
 
 import (
+	"blockchain-newsfeed-server/config"
 	"fmt"
-	"fx-golang-server/config"
 	"strconv"
 
 	"github.com/hibiken/asynq"

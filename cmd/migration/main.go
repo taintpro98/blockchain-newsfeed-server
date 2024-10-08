@@ -1,10 +1,10 @@
 package main
 
 import (
+	"blockchain-newsfeed-server/config"
+	"blockchain-newsfeed-server/pkg/database"
 	"context"
 	"flag"
-	"fx-golang-server/config"
-	"fx-golang-server/pkg/database"
 	"log"
 
 	_ "github.com/jackc/pgx/v4/stdlib"

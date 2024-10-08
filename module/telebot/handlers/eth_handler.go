@@ -1,9 +1,9 @@
 package handlers
 
 import (
+	"blockchain-newsfeed-server/module/blockchain"
+	"blockchain-newsfeed-server/pkg/utility"
 	"context"
-	"fx-golang-server/module/blockchain"
-	"fx-golang-server/pkg/utility"
 
 	tgbotapi "github.com/go-telegram-bot-api/telegram-bot-api"
 	"github.com/rs/zerolog/log"

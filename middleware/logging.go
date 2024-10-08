@@ -1,9 +1,9 @@
 package middleware
 
 import (
+	"blockchain-newsfeed-server/pkg/constants"
+	"blockchain-newsfeed-server/pkg/tracing"
 	"fmt"
-	"fx-golang-server/pkg/constants"
-	"fx-golang-server/pkg/tracing"
 	"time"
 
 	"github.com/gin-gonic/gin"

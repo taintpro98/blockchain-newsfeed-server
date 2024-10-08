@@ -1,12 +1,12 @@
 package httpclient
 
 import (
+	"blockchain-newsfeed-server/pkg/constants"
+	"blockchain-newsfeed-server/pkg/e"
 	"context"
 	"encoding/json"
 	"errors"
 	"fmt"
-	"fx-golang-server/pkg/constants"
-	"fx-golang-server/pkg/e"
 
 	"io"
 	"net"
@@ -37,7 +37,7 @@ func (c HttpClient) DoRequest(ctx context.Context, param DoRequestParam, output 
 	for key, value := range param.Headers {
 		param.Request.Header.Set(key, value)
 	}
-	
+
 	requestID := ctx.Value(constants.TraceID)
 	if requestID != nil {
 		param.Request.Header.Add(constants.XRequestID, fmt.Sprintf("%s", requestID))

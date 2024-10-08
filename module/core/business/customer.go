@@ -1,10 +1,10 @@
 package business
 
 import (
+	"blockchain-newsfeed-server/module/core/dto"
+	"blockchain-newsfeed-server/module/core/model"
+	"blockchain-newsfeed-server/module/core/repository"
 	"context"
-	"fx-golang-server/module/core/dto"
-	"fx-golang-server/module/core/model"
-	"fx-golang-server/module/core/repository"
 )
 
 type ICustomerBiz interface {

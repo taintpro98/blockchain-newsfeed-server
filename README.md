@@ -1,6 +1,6 @@
 ## Initialization
 ```bash
-go mod init fx-golang-server
+go mod init blockchain-newsfeed-server
 ```
 
 ## Swagger
@@ -61,13 +61,13 @@ go run ./cmd/migration/main.go -dir seeds up
 # Build an image on local
 docker build --build-arg TELEGRAM_TOKEN=$(grep TELEGRAM_TOKEN .env | cut -d '=' -f2) \
              --build-arg TELEGRAM_CHAT_ID=$(grep TELEGRAM_CHAT_ID .env | cut -d '=' -f2) \
-            -t fx-golang-server .
+            -t blockchain-newsfeed-server .
 
 # Run container
-docker run -d -p 8080:8080 --name fx-golang-server-container fx-golang-server
+docker run -d -p 8080:8080 --name blockchain-newsfeed-server-container blockchain-newsfeed-server
 
 # Start container
-docker start fx-golang-server-container
+docker start blockchain-newsfeed-server-container
 ```
 
 ## Deployment

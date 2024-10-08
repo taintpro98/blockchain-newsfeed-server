@@ -1,15 +1,15 @@
 package transport
 
 import (
-	"fx-golang-server/module/core/business"
+	"blockchain-newsfeed-server/module/core/business"
 	"net/http"
 
 	"github.com/gin-gonic/gin"
 )
 
 type Transport struct {
-	authBiz  business.IAuthenticateBiz
-	movieBiz business.IMovieBiz
+	authBiz     business.IAuthenticateBiz
+	movieBiz    business.IMovieBiz
 	customerBiz business.ICustomerBiz
 }
 
@@ -19,8 +19,8 @@ func NewTransport(
 	customerBiz business.ICustomerBiz,
 ) *Transport {
 	return &Transport{
-		authBiz:  authBiz,
-		movieBiz: movieBiz,
+		authBiz:     authBiz,
+		movieBiz:    movieBiz,
 		customerBiz: customerBiz,
 	}
 }

@@ -5,7 +5,7 @@ import (
 	"net/http"
 	"reflect"
 
-	"fx-golang-server/pkg/e"
+	"blockchain-newsfeed-server/pkg/e"
 
 	"github.com/gin-gonic/gin"
 	"github.com/go-playground/validator"

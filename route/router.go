@@ -1,9 +1,9 @@
 package route
 
 import (
-	"fx-golang-server/middleware"
-	"fx-golang-server/module/core/transport"
-	"fx-golang-server/token"
+	"blockchain-newsfeed-server/middleware"
+	"blockchain-newsfeed-server/module/core/transport"
+	"blockchain-newsfeed-server/token"
 
 	"github.com/gin-gonic/gin"
 )

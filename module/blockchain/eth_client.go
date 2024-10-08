@@ -1,8 +1,8 @@
 package blockchain
 
 import (
+	"blockchain-newsfeed-server/config"
 	"context"
-	"fx-golang-server/config"
 	"math/big"
 
 	"github.com/ethereum/go-ethereum/common"

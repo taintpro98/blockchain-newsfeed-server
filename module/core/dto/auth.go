@@ -1,7 +1,7 @@
 package dto
 
 import (
-	"fx-golang-server/pkg/e"
+	"blockchain-newsfeed-server/pkg/e"
 	"time"
 
 	"github.com/dgrijalva/jwt-go"

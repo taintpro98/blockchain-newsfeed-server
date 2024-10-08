@@ -1,8 +1,8 @@
 package database
 
 import (
+	"blockchain-newsfeed-server/config"
 	"fmt"
-	"fx-golang-server/config"
 
 	"github.com/rs/zerolog/log"
 	"gorm.io/driver/postgres"

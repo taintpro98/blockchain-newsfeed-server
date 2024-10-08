@@ -1,27 +1,27 @@
 package main
 
 import (
+	"blockchain-newsfeed-server/config"
+	"blockchain-newsfeed-server/middleware"
+	"blockchain-newsfeed-server/module/blockchain"
+	"blockchain-newsfeed-server/module/core/business"
+	"blockchain-newsfeed-server/module/core/repository"
+	"blockchain-newsfeed-server/module/core/transport"
+	"blockchain-newsfeed-server/module/telebot"
+	"blockchain-newsfeed-server/pkg/cache"
+	"blockchain-newsfeed-server/pkg/database"
+	"blockchain-newsfeed-server/pkg/tracing"
+	"blockchain-newsfeed-server/route"
+	"blockchain-newsfeed-server/token"
 	"context"
 	"errors"
 	"fmt"
-	"fx-golang-server/config"
-	"fx-golang-server/middleware"
-	"fx-golang-server/module/blockchain"
-	"fx-golang-server/module/core/business"
-	"fx-golang-server/module/core/repository"
-	"fx-golang-server/module/core/transport"
-	"fx-golang-server/module/telebot"
-	"fx-golang-server/pkg/cache"
-	"fx-golang-server/pkg/database"
-	"fx-golang-server/pkg/tracing"
-	"fx-golang-server/route"
-	"fx-golang-server/token"
 	"net/http"
 	"time"
 
 	tgbotapi "github.com/go-telegram-bot-api/telegram-bot-api"
 
-	_ "fx-golang-server/docs" // Import generated docs
+	_ "blockchain-newsfeed-server/docs" // Import generated docs
 
 	"github.com/gin-gonic/gin"
 	"github.com/rs/zerolog/log"
@@ -63,8 +63,8 @@ var ConnectionModule = fx.Module(
 var BusinessModule = fx.Module(
 	"business",
 	fx.Provide(
-		business.NewAuthenticateBiz, 
-		business.NewMovieBiz, 
+		business.NewAuthenticateBiz,
+		business.NewMovieBiz,
 		business.NewCustomerBiz,
 		telebot.NewTelegramClient,
 	),

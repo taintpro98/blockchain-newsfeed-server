@@ -1,11 +1,11 @@
 package token
 
 import (
+	"blockchain-newsfeed-server/config"
+	"blockchain-newsfeed-server/pkg/e"
 	"context"
 	"crypto/rsa"
 	"errors"
-	"fx-golang-server/config"
-	"fx-golang-server/pkg/e"
 	"os"
 	"time"
 
