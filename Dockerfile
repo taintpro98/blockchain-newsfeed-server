@@ -37,4 +37,4 @@ EXPOSE 8080
 
 # Run the web service on container startup.
 CMD ["/app/api", "-e", "cloud"]
-# CMD ["/app/api", "--config_url", "https://storage.cloud.google.com/fx_golang_server_buckets/config.yml"]
+# CMD ["/app/api", "--config_url", "https://storage.cloud.google.com/blockchain_newsfeed_server_buckets/config.yml"]
