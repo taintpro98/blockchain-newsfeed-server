@@ -13,12 +13,12 @@ func (t *Transport) ListPosts(ctx *gin.Context) {
 		dto.HandleResponse(ctx, nil, err)
 		return
 	}
-	movies, total, err := t.postBiz.ListPosts(ctx, data)
+	posts, total, err := t.postBiz.ListPosts(ctx, data)
 	if err != nil {
 		dto.HandleResponse(ctx, nil, err)
 	} else {
 		limit, offset := data.Paginate.InfoPaginate()
-		dto.HandleResponse(ctx, movies, nil, dto.PaginateResponse{
+		dto.HandleResponse(ctx, posts, nil, dto.PaginateResponse{
 			Total:  total,
 			Limit:  limit,
 			Offset: offset,

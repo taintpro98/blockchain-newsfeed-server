@@ -44,7 +44,7 @@ func (p *postBiz) CreatePost(ctx context.Context, userID string, data dto.Create
 }
 
 func (b *postBiz) ListPosts(ctx context.Context, data dto.ListPostsRequest) (dto.ListPostsResponse, *int64, error) {
-	log.Info().Ctx(ctx).Interface("data", data).Msg("movieBiz ListMovies")
+	log.Info().Ctx(ctx).Interface("data", data).Msg("postBiz ListPosts")
 	postDBs, err := b.postRepo.List(ctx, dto.FilterPost{
 		CommonFilter: dto.CommonFilter{
 			Select: []string{"id", "title", "content"},
