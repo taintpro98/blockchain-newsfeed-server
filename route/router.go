@@ -22,14 +22,14 @@ func RegisterRoutes(
 
 	publicApi.Use(middleware.AuthMiddleware(jwtMaker))
 	{
-		movieApi := publicApi.Group("/movies")
-		{
-			movieApi.GET("", trpt.ListMovies)
-		}
-
 		customerApi := publicApi.Group("/customer")
 		{
 			customerApi.GET("/profile", trpt.GetCustomerProfile)
+		}
+
+		postApi := publicApi.Group("/post")
+		{
+			postApi.POST("", trpt.CreatePost)
 		}
 	}
 }

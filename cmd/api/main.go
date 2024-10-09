@@ -66,13 +66,14 @@ var BusinessModule = fx.Module(
 		business.NewAuthenticateBiz,
 		business.NewMovieBiz,
 		business.NewCustomerBiz,
+		business.NewPostBiz,
 		telebot.NewTelegramClient,
 	),
 )
 
 var RepositoryModule = fx.Module(
 	"repository",
-	fx.Provide(repository.NewUserRepository, repository.NewMovieRepository),
+	fx.Provide(repository.NewUserRepository, repository.NewMovieRepository, repository.NewPostRepository),
 )
 
 func NewGinEngine(trpt *transport.Transport, jwtMaker token.IJWTMaker) *gin.Engine {
